@@ -5,11 +5,15 @@ import {
     until
 } from 'selenium-webdriver'
 
+import dotenv from 'dotenv'
+const env = process.env 
+console.log(env.EMAIL)
+
 let driver;
 
 async function accessPairs() {
     driver = new webdriver.Builder()
-        .withCapabilities(webdriver.Capabilities.chrome())
+        .withCapabilities(webdriver.Capabilities.firefox())
         .build();
     try {
         await driver.get("https://www.facebook.com")
