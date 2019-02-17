@@ -11,10 +11,10 @@
   },
   "dependencies": {
     "@types/dotenv": "^6.1.0",
+    "async": "^2.6.2",
     "dotenv": "^6.2.0",
     "firefox-profile": "^1.2.0"
   },
-  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "deploy": "python ../deploy/deploy.py"

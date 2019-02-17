@@ -112,7 +112,7 @@ async function accessPairs() {
 
         // 足跡開始
         let count = 0
-        let limit = Math.floor(Math.random() * 2000)
+        let limit = Math.floor(Math.random() * 1000)
 
         
 
@@ -134,9 +134,12 @@ async function accessPairs() {
         console.error(e);
     } finally {
         // await driver.quit();
+        return new Promise(resolve => resolve())
     }
 };
-accessPairs();
+accessPairs().then( () => {
+  console.log("finish")
+});
 
 import { resolve } from "dns";
 
@@ -175,3 +178,9 @@ enum Depth {
   Middle,
   Deep
 }
+
+// exports.handler = (event: any, context: any, callback: any ) => {
+//   accessPairs().then(() => {
+//     console.log("funish!!")
+//   })
+// }
