@@ -8,14 +8,14 @@ export class Sleep {
     
     switch (depth) {
       case Depth.Shallow:
-        time = Math.floor(Math.random() * 1000) + 500
+        time = Math.floor(Math.random() * 1000) + 1000
         break;
 
       case Depth.Middle:
-        time = Math.floor(Math.random() * 1500) + 1500
+        time = Math.floor(Math.random() * 2000) + 2000
         break;
       case Depth.Deep:
-        time = Math.floor(Math.random() * 3000) + 3000
+        time = Math.floor(Math.random() * 4000) + 4000
         break
       default:
         time = 1000
