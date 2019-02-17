@@ -27,16 +27,17 @@ async function accessPairs() {
           password = process.env.PASSWORD
         }
 
+        //facebookログイン成功
         await driver.get("https://www.facebook.com")
         await driver.findElement(By.id("email")).sendKeys(email)
         await driver.findElement(By.id("pass")).sendKeys(password)
         await driver.findElement(By.xpath("//input[@data-testid='royal_login_button']")).click()
 
-        // await driver.get('https://www.pairs.lv/');
-        // await driver.findElement(By.className('login-facebook-button')).click()
-        // await driver.findElement(By.id("email")).sendKeys("email")
+        //pairsへ
+        await driver.get('https://www.pairs.lv/');
+        await driver.findElement(By.className('login-facebook-button')).click()
         
-        // await driver.wait(until.titleIs('webdriver - Google 検索'), 1000);
+        
     } catch (e) {
         console.error(e);
     } finally {
