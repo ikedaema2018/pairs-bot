@@ -8,5 +8,8 @@
     "@types/selenium-webdriver": "^3.0.15",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "typescript": "^3.3.3"
+  },
+  "dependencies": {
+    "firefox-profile": "^1.2.0"
   }
 }

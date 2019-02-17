@@ -12,13 +12,13 @@ async function accessPairs() {
         .withCapabilities(webdriver.Capabilities.chrome())
         .build();
     try {
-        // await driver.get("https://www.facebook.org")
-        // await driver.findElement(By.id("email")).sendKeys("email")
-        // await driver.findElement(By.id("pass")).sendKeys("pass")
-
-        await driver.get('https://www.pairs.lv/');
-        await driver.findElement(By.className('login-facebook-button')).click()
+        await driver.get("https://www.facebook.com")
         await driver.findElement(By.id("email")).sendKeys("email")
+        await driver.findElement(By.id("pass")).sendKeys("pass")
+
+        // await driver.get('https://www.pairs.lv/');
+        // await driver.findElement(By.className('login-facebook-button')).click()
+        // await driver.findElement(By.id("email")).sendKeys("email")
         
         // await driver.wait(until.titleIs('webdriver - Google 検索'), 1000);
     } catch (e) {
